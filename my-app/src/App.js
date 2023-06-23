@@ -23,3 +23,18 @@ function App() {
 }
 
 export default App;
+
+const TodoItem = ({ itemProp, handleChange, delTodo }) => {
+  // ...
+  return (
+    <li className={styles.item}>
+      <div className={styles.content}>
+        {/* ... */}
+        <button>Edit</button>
+        <button onClick={() => delTodo(itemProp.id)}>Delete</button>
+        {/* ... */}
+      </div>
+    </li>
+  );
+};
+export default TodoItem;
